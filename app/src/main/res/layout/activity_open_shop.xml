@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="16dp"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.register.OpenShopActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="50sp"
+            android:text="ShopInfo"
+            android:gravity="center_horizontal" />
+
+        <TextView
+
+            android:layout_marginTop="50dp"
+            android:layout_height="wrap_content"
+            android:text="Id number:"
+            android:layout_width="match_parent" />
+        <EditText
+            android:id="@+id/openshop_id"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Input your Id number"
+            android:layout_width="match_parent" />
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ShopName:" />
+        <EditText
+            android:id="@+id/openshop_shopname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Input your shopname" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ShopIntro:" />
+        <EditText
+            android:id="@+id/openshop_shopinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="5"
+            android:hint="Input shop intro"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ShopLocation:" />
+        <EditText
+            android:id="@+id/openshop_shoplocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="5"
+            android:hint="Input shop intro"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal">
+        <Button
+            android:id="@+id/openshop_button"
+            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_centerHorizontal="true"
+            android:text="Open shop" />
+    </RelativeLayout>
+</RelativeLayout>
