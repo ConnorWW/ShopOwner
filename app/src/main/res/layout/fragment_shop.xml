@@ -15,7 +15,10 @@
             android:id="@+id/shop_addproduct_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Add product"/>
+            android:background="@color/light_blue_400"
+            android:textColor="@color/light_blue_50"
+            android:textSize="20sp"
+            android:text="添加服务"/>
 
     </LinearLayout>
 
@@ -26,15 +29,15 @@
         android:layout_marginTop="50dp">
     </ListView>
 
-    <ListView
+    <com.center.shop.linkedlistview.PinnedHeaderListView
+
         android:id="@+id/shop_products"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="70dp"
         android:layout_marginTop="50dp">
 
-    </ListView>
-
+    </com.center.shop.linkedlistview.PinnedHeaderListView>
 
 
 

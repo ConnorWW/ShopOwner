@@ -2,12 +2,14 @@ package com.login;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.avos.avoscloud.AVException;
@@ -33,6 +35,12 @@ public class LoginActivity extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_login);
 
+
+
+        Typeface customFont = Typeface.createFromAsset(this.getAssets(), "font/1649.ttf");
+        TextView view = (TextView) findViewById(R.id.login_title);
+        view.setTypeface(customFont);
+
         login_button=(Button)findViewById(R.id.login_button);
         login_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +53,10 @@ public class LoginActivity extends Activity {
 
                 Toast.makeText(LoginActivity.this, account+":"+password,
                         Toast.LENGTH_SHORT).show();
+
+
+                //Intent intent=new Intent(LoginActivity.this,CenterActivity.class);
+                //startActivity(intent);
 
 
                 final AVObject[] shopOwners = {new AVObject()};
@@ -72,6 +84,7 @@ public class LoginActivity extends Activity {
 
                     }
                 });
+
 
             }
         });

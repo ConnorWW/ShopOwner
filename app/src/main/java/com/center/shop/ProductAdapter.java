@@ -25,8 +25,10 @@ public class ProductAdapter extends ArrayAdapter<Product>{
     }
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+
         Product product = getItem(position); // 获取当前项的Fruit实例
         View view = LayoutInflater.from(getContext()).inflate(resourceId, null);
+
         TextView productName = (TextView) view.findViewById(R.id.product_name);
         productName.setText(product.getName()+"("+product.getPid()+")");
 
@@ -41,7 +43,6 @@ public class ProductAdapter extends ArrayAdapter<Product>{
 
         TextView productPrice=(TextView)view.findViewById(R.id.product_price);
         productPrice.setText("￥"+product.getPrice());
-
 
         return view;
     }
